@@ -44,3 +44,11 @@ export async function buscarPedidosPorStatus(status) {
         console.error(error)
     }
 }
+
+export async function cadastrarEcommerce(body) {
+    try {
+        await api.post('/ecommerces', body)
+    } catch (error) {
+        console.error(error)
+    }
+}
