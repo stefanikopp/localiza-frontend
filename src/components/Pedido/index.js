@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Divider } from '@material-ui/core';
+import { Container, Typography, Divider} from '@material-ui/core';
 import Cliente from "../Cliente";
 import Ecommerce from "../Ecommerce";
 import Produto from '../Produto';
@@ -22,14 +22,6 @@ const Pedido = ({ item }) => {
     return (
         <Container style={styles.container}>
 
-            <Typography>
-                Status: {item.status}
-            </Typography>
-
-            <Typography>
-                Valor Total: {item.valor_total}
-            </Typography>
-
             <Cliente  cliente={item.cliente} />
 
             <Ecommerce ecommerce={item.ecommerce} />
@@ -39,15 +31,23 @@ const Pedido = ({ item }) => {
             <Typography variant={'subtitle2'}>
                Produtos
             </Typography> 
-            <Divider />
 
+            <Divider />
             {
                 item.produtos.map((produto, index) => (
                     <Produto key={index} produto={produto} /> 
                 ))
             }
-
             </Container>
+
+            <Typography>
+                Status: {item.status}
+            </Typography>
+
+            <Typography>
+                Valor Total: {item.valor_total}
+            </Typography>
+
         </Container >
     );
 
