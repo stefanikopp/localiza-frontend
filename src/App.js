@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Home from './pages/Home';
 import CadastroEcommerce from './pages/CadastroEcommerce'
-import { Button, Divider, Typography, Container, Box } from '@material-ui/core';
+import { Button, Divider, Typography, Box } from '@material-ui/core';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const styles = {
   container: {
@@ -12,8 +13,10 @@ const styles = {
     borderRadius: 16
 },
   botao: {
-    backgroundColor: '#CDC9C9',
-    marginRight: 10,
+    marginRight: 200,
+  },
+  t: {
+    marginLeft: 15
   }
 }
 
@@ -22,13 +25,14 @@ function App() {
 
   return (
     <div  style={styles.container}>
-      <Box display={'flex'} flexDirection={'row'} justifyContent={'space-between'} style={{ marginBottom: 10 }}>
-        <Typography variant={'h6'} color="primary">
-          Cadastrar Ecommerce
+      <Box display={'flex'} flexDirection={'row'} justifyContent={'space-between'} style={{ marginBottom: 20 }}>
+        <Typography style={styles.t} variant={'h6'} color="primary">
+          Cadastrar Ecommerce 
         </Typography>
 
-        <Button style={styles.botao} color="primary" onClick={() => toggleCadastro(!showCadastro)} color="primary">
-          { showCadastro ? 'Pedidos' : ' Cadastrar' }        
+        <Button style={styles.botao} onClick={() => toggleCadastro(!showCadastro)} color="primary">
+          { showCadastro ? 'Pedidos' : ' Cadastrar' }  
+          <ArrowForwardIosIcon/>      
         </Button>
       </Box>
 

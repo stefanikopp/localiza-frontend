@@ -41,9 +41,9 @@ function CadastroEcommerce({ voltarPraPedidos }) {
             </Typography>
             <Divider />
 
-            <TextField value={nome} onChange={(event) => setNome(event.target.value)} id="standard-basic" label="Nome"  style={styles.input}/>
-            <TextField value={endereco} onChange={(event) => setEndereco(event.target.value)} id="standard-basic" label="Endereço"  style={styles.input}/>
-            <TextField value={telefone} onChange={(event) => setTelefone(event.target.value)} id="standard-basic" label="Telefone"  style={styles.input}/>
+            <TextField value={nome} onChange={(event) => setNome(event.target.value)} id="standard-basic" label="Nome"  style={styles.input}/><p/>
+            <TextField value={endereco} onChange={(event) => setEndereco(event.target.value)} id="standard-basic" label="Endereço"  style={styles.input}/><p/>
+            <TextField value={telefone} onChange={(event) => setTelefone(event.target.value)} id="standard-basic" label="Telefone"  style={styles.input}/><p/>
         
             <Button onClick={onClickCadastro} style={styles.botao} color="primary">  
                 Confirmar 
