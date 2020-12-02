@@ -21,13 +21,15 @@ const styles = {
 function CadastroEcommerce({ voltarPraPedidos }) {
 
     const [nome, setNome] = useState('')
-    const [endereco, setEndereco] = useState('')
+    const [cep, setCep] = useState('')
+    const [numero, setNumero] = useState('')
     const [telefone, setTelefone] = useState('')
 
     async function onClickCadastro() {
         await cadastrarEcommerce({
             nome,
-            endereco,
+            cep,
+            numero,
             telefone
         })
         
@@ -42,7 +44,8 @@ function CadastroEcommerce({ voltarPraPedidos }) {
             <Divider />
 
             <TextField value={nome} onChange={(event) => setNome(event.target.value)} id="standard-basic" label="Nome"  style={styles.input}/><p/>
-            <TextField value={endereco} onChange={(event) => setEndereco(event.target.value)} id="standard-basic" label="Endereço"  style={styles.input}/><p/>
+            <TextField value={cep} onChange={(event) => setCep(event.target.value)} id="standard-basic" label="CEP"  style={styles.input}/><p/>
+            <TextField value={numero} onChange={(event) => setNumero(event.target.value)} id="standard-basic" label="Número"  style={styles.input}/><p/>
             <TextField value={telefone} onChange={(event) => setTelefone(event.target.value)} id="standard-basic" label="Telefone"  style={styles.input}/><p/>
         
             <Button onClick={onClickCadastro} style={styles.botao} color="primary">  
